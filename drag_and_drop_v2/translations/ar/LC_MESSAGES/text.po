@@ -597,7 +597,7 @@ msgstr ""
 
 #: utils.py:45
 msgid "Final attempt was used, highest score is {score}"
-msgstr "تم استنفاد آخر محاولة، أعلى درجة هي {score}"
+msgstr "لقد تم استخدام المحاولة الأخيرة؛ أعلى نتيجة تم الحصول عليها هي {score}"
 
 #: utils.py:24
 msgid "Correctly placed {correct_count} item."
@@ -612,12 +612,12 @@ msgstr[5] ""
 #: utils.py:62
 msgid "Misplaced {misplaced_count} item."
 msgid_plural "Misplaced {misplaced_count} items."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "فقرات في المكان الخطأ {misplaced_count}"
+msgstr[1] "فقرات في المكان الخطأ {misplaced_count}"
+msgstr[2] "فقرات في المكان الخطأ {misplaced_count}"
+msgstr[3] "فقرات في المكان الخطأ {misplaced_count}"
+msgstr[4] "فقرات في المكان الخطأ {misplaced_count}"
+msgstr[5] "فقرات في المكان الخطأ {misplaced_count}"
 
 #: utils.py:73
 msgid ""

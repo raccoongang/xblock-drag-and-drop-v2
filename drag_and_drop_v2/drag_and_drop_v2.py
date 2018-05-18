@@ -665,9 +665,9 @@ class DragAndDropBlock(
 
         if self.weight > 0:
             if self.attempts_remain:
-                grade_feedback_template = FeedbackMessages.GRADE_FEEDBACK_TPL
+                grade_feedback_template = self.i18n_service.gettext(FeedbackMessages.GRADE_FEEDBACK_TPL)
             else:
-                grade_feedback_template = FeedbackMessages.FINAL_ATTEMPT_TPL
+                grade_feedback_template = self.i18n_service.gettext(FeedbackMessages.FINAL_ATTEMPT_TPL)
 
             feedback_msgs.append(
                 FeedbackMessage(grade_feedback_template.format(score=self.weighted_grade()), grade_feedback_class)
