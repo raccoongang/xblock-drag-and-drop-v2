@@ -2,6 +2,7 @@
 # Translators:
 # Anderson Franca <anderson.frca@gmail.com>, 2017
 # danielcn <deo.daniel@gmail.com>, 2016
+# Fabio Oliveira Silva <fabio.oliv.silva@gmail.com>, 2018
 # Genaro Costa <genarocosta@yahoo.com>, 2016
 # Heitor Oliveira <heitor.farol@gmail.com>, 2016
 # Renata Barboza, 2017
@@ -12,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XBlocks\n"
 "POT-Creation-Date: 2016-03-30 16:54+0500\n"
-"PO-Revision-Date: 2017-09-23 22:34+0000\n"
-"Last-Translator: Eric Fischer <efischer@edx.org>\n"
+"PO-Revision-Date: 2018-10-02 18:40+0000\n"
+"Last-Translator: Fabio Oliveira Silva <fabio.oliv.silva@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/open-edx/xblocks/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -540,7 +541,7 @@ msgstr "Fechar"
 
 #: public/js/drag_and_drop.js
 msgid "Go to Beginning"
-msgstr ""
+msgstr "Vá para o Início"
 
 #: public/js/drag_and_drop.js
 msgid "Problem"
@@ -609,27 +610,27 @@ msgstr[1] "{possible} pontos possíveis (não corrigidos)"
 #: drag_and_drop_v2/public/js/drag_and_drop.js:374
 #: drag_and_drop_v2/public/js/drag_and_drop.js:839
 msgid "Hints:"
-msgstr ""
+msgstr "Dicas:"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:224
 msgid ", dropzone"
-msgstr ""
+msgstr ", ponto de largada"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:479
 msgid "Drag and Drop Problem"
-msgstr ""
+msgstr "Programa de Arrastar e Soltar"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:509
 msgid "Drop Targets"
-msgstr ""
+msgstr "Destinos de Soltar"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:517
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:12
 msgid "Submitting"
-msgstr ""
+msgstr "Enviando"
 
 #: utils.py:44
 msgid "Your highest score is {score}"
