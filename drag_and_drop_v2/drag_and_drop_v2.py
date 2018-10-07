@@ -260,7 +260,8 @@ class DragAndDropBlock(
         """
 
         fragment = Fragment()
-        fragment.add_content(loader.render_template('/templates/html/drag_and_drop.html'))
+        fragment.add_content(loader.render_django_template('/templates/html/drag_and_drop.html',
+                                                           i18n_service=self.i18n_service))
         css_urls = (
             'public/css/drag_and_drop.css',
         )
@@ -351,8 +352,9 @@ class DragAndDropBlock(
         }
 
         fragment = Fragment()
-        fragment.add_content(loader.render_template('/templates/html/drag_and_drop_edit.html', context))
-
+        fragment.add_content(loader.render_django_template('/templates/html/drag_and_drop_edit.html',
+                                                           context=context,
+                                                           i18n_service=self.i18n_service))
         css_urls = (
             'public/css/drag_and_drop_edit.css',
         )
@@ -718,7 +720,7 @@ class DragAndDropBlock(
         item = self._get_item_definition(item_attempt['val'])
         is_correct = self._is_attempt_correct(item_attempt)
         if item_attempt['zone'] is None:
-            del self.item_state[str(item['id'])]
+            self.item_state.pop(str(item['id']), None)
             self._publish_item_to_bank_event(item['id'], is_correct)
         else:
             # State is always updated in assessment mode to store intermediate item positions
@@ -831,13 +833,13 @@ class DragAndDropBlock(
         for this.
         """
         if hasattr(self.runtime, 'replace_urls'):
-            url = self.runtime.replace_urls('"{}"'.format(url))[1:-1]
+            url = self.runtime.replace_urls(u'"{}"'.format(url))[1:-1]
         elif hasattr(self.runtime, 'course_id'):
             # edX Studio uses a different runtime for 'studio_view' than 'student_view',
             # and the 'studio_view' runtime doesn't provide the replace_urls API.
             try:
                 from static_replace import replace_static_urls  # pylint: disable=import-error
-                url = replace_static_urls('"{}"'.format(url), None, course_id=self.runtime.course_id)[1:-1]
+                url = replace_static_urls(u'"{}"'.format(url), None, course_id=self.runtime.course_id)[1:-1]
             except ImportError:
                 pass
         return url
