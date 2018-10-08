@@ -1,17 +1,20 @@
 # 
 # Translators:
+# Anderson Franca <anderson.frca@gmail.com>, 2017
 # danielcn <deo.daniel@gmail.com>, 2016
+# Fabio Oliveira Silva <fabio.oliv.silva@gmail.com>, 2018
 # Genaro Costa <genarocosta@yahoo.com>, 2016
 # Heitor Oliveira <heitor.farol@gmail.com>, 2016
-# Renata Barboza-Murray, 2016
+# Renata Barboza, 2017
+# Renata Barboza, 2016
 # Rogério Santos Filho <rogerio.gns@gmail.com>, 2016
 # Salatiel Ewerton <salatiel2021@hotmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: XBlocks\n"
 "POT-Creation-Date: 2016-03-30 16:54+0500\n"
-"PO-Revision-Date: 2016-12-23 05:47+0000\n"
-"Last-Translator: Renata Barboza-Murray\n"
+"PO-Revision-Date: 2018-10-02 18:40+0000\n"
+"Last-Translator: Fabio Oliveira Silva <fabio.oliv.silva@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/open-edx/xblocks/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,11 +31,11 @@ msgstr "Um triângulo isósceles com três camadas de alturas semelhantes está 
 
 #: default_data.py
 msgid "Of course it goes here! It goes anywhere!"
-msgstr ""
+msgstr "Claro que cabe aqui! Cabe em qualquer lugar!"
 
 #: default_data.py
 msgid "Goes anywhere"
-msgstr ""
+msgstr "Cabe em qualquer lugar"
 
 #: default_data.py
 msgid "The Top Zone"
@@ -95,7 +98,7 @@ msgstr "Vai para a zona inferior"
 
 #: default_data.py
 msgid "I don't belong anywhere"
-msgstr ""
+msgstr "Eu não caibo em nenhum lugar"
 
 #: drag_and_drop_v2.py msgid "This setting limits the number of items that can
 #: be dropped into a single zone." msgstr "" drag_and_drop_v2.py
@@ -230,7 +233,7 @@ msgstr "A ferramenta show_answer deve somente ser executada no modo de avaliaç�
 
 #: drag_and_drop_v2.py
 msgid "There are attempts remaining"
-msgstr ""
+msgstr "Há tentativas restantes"
 
 #: drag_and_drop_v2.py
 msgid "Unknown DnDv2 mode {mode} - course is misconfigured"
@@ -264,7 +267,7 @@ msgstr "Descrição"
 
 #: templates/html/js_templates.html
 msgid "Describe this zone to non-visual users."
-msgstr ""
+msgstr "Descreva esta zona para usuários não-visuais."
 
 #: templates/html/js_templates.html
 msgid "width"
@@ -322,11 +325,11 @@ msgstr "Descrição da imagem (deve fornecer informação suficiente para que se
 
 #: templates/html/js_templates.html
 msgid "Success feedback"
-msgstr ""
+msgstr "Comentário de êxito"
 
 #: templates/html/js_templates.html
 msgid "Error feedback"
-msgstr ""
+msgstr "Comentário de erro"
 
 #: templates/html/js_templates.html
 msgid "Show advanced settings"
@@ -334,13 +337,13 @@ msgstr "Exibir configurações avançadas"
 
 #: templates/html/js_templates.html
 msgid "Preferred width"
-msgstr ""
+msgstr "Largura preferida"
 
 #: templates/html/js_templates.html
 msgid ""
 "Specify preferred width as percentage of the background image width. Leave "
 "blank for automatic width."
-msgstr ""
+msgstr "Especifique a largura preferível como porcentagem da largura da imagem de plano de fundo. Para largura automática, deixe o campo em branco."
 
 #: templates/html/js_templates.html
 msgid "Use text that is clear and descriptive of the item to be placed."
@@ -393,7 +396,7 @@ msgid ""
 "                            The description should provide sufficient information to allow anyone\n"
 "                            to solve the problem even without seeing the image.\n"
 "                        "
-msgstr ""
+msgstr "\nForneça uma descrição da imagem para usuários não-visuais.\nA descrição deve ter informação suficiente para permitir que qualquer pessoa\nresolva o problema mesmo sem visualizar a imagem."
 
 #: templates/html/drag_and_drop_edit.html
 msgid "Zone definitions"
@@ -455,6 +458,14 @@ msgstr "Posicionado em: {zone_title}"
 msgid "Correctly placed in: {zone_title}"
 msgstr "Corretamente posicionado em: {zone_title}"
 
+#: drag_and_drop_v2/public/js/drag_and_drop.js:137
+msgid ", draggable, grabbed"
+msgstr ", arrastável, agarrado"
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:137
+msgid ", draggable"
+msgstr ", arrastável"
+
 #: public/js/drag_and_drop.js
 msgid "Reset"
 msgstr "Redefinir"
@@ -479,35 +490,58 @@ msgstr "Comentário"
 msgid "Keyboard Help"
 msgstr "Ajuda do Teclado"
 
-#: public/js/drag_and_drop.js
-msgid "You can complete this problem using only your keyboard."
-msgstr "Você pode completar este problema usando apenas seu teclado."
+#: drag_and_drop_v2/public/js/drag_and_drop.js:305
+msgid "This is a screen reader-friendly problem"
+msgstr "Essa tela possui problemas de leitura amigável."
 
-#: public/js/drag_and_drop.js
-msgid "Use \"Tab\" and \"Shift-Tab\" to navigate between items and zones."
-msgstr "Use as teclas \"Tab\" e \"Shift-Tab\" para navegar entre itens e zonas."
-
-#: public/js/drag_and_drop.js
+#: drag_and_drop_v2/public/js/drag_and_drop.js:306
 msgid ""
-"Press \"Enter\", \"Space\", \"Ctrl-m\", or \"⌘-m\" on an item to select it "
-"for dropping, then navigate to the zone you want to drop it on."
-msgstr "Pressione \"Enter\", \"Espaço\", \"Ctrl-m\" ou \"⌘-m\" em um item para selecionar e arrastá-lo, em seguida, vá até à zona em que você deseja soltá-lo."
+"You can complete this problem using only your keyboard by following the "
+"guidance below:"
+msgstr "Você pode completar esse problema usando seu teclado para seguir o guia abaixo:"
 
-#: public/js/drag_and_drop.js
+#: drag_and_drop_v2/public/js/drag_and_drop.js:307
 msgid ""
-"Press \"Enter\", \"Space\", \"Ctrl-m\", or \"⌘-m\" to drop the item on the "
-"current zone."
-msgstr "Pressione \"Enter\", \"Space\", \"Ctrl-m\" ou \"⌘-m\" para soltar o item na zona atual."
+"Drag and Drop problems consist of draggable items and dropzones. Users "
+"should select a draggable item with their keyboard and then navigate to an "
+"appropriate dropzone to drop it."
+msgstr "Os problemas de arrastar e soltar consistem em itens arrastáveis e área de soltura. Usuários podem selecionar um item arrastável com seu teclado e navegar até um ponto apropriado para solta-lo. "
 
-#: public/js/drag_and_drop.js
+#: drag_and_drop_v2/public/js/drag_and_drop.js:309
 msgid ""
-"Press \"Esc\" if you want to cancel the drop operation (for example, to "
-"select a different item)."
-msgstr "Pressione \"Esc\" caso queira cancelar a ação de soltar (por exemplo, para selecionar um item diferente)."
+"Use only TAB and SHIFT+TAB to navigate between draggable items and drop "
+"zones."
+msgstr "Utilize somente TAB e SHIFT+TAB para navegar entre os intens arrastaveis e áreas para soltar."
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:310
+msgid "Press CTRL+M to select a draggable item (effectively picking it up)."
+msgstr "Aperte CTRL+M para selecionar um item arrastável (efetivamente pegando)"
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:311
+msgid ""
+"Navigate using TAB and SHIFT+TAB to the appropriate dropzone and press "
+"CTRL+M once more to drop it here."
+msgstr "Navegue utilizando TAB e SHIFT+TAB para a área de soltura apropriada pressionando CTRL+M uma vez mais para soltar aqui."
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:312
+msgid ""
+"Press ESC if you want to cancel the drop operation (for example, to select a"
+" different item)."
+msgstr "Pressione ESC se você deseja cancelar a operação de soltar (por exemplo, para selecionar um item diferente)."
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:313
+msgid ""
+"TAB back to the list of draggable items and repeat this process until all of"
+" the draggable items have been placed on their respective dropzones."
+msgstr "TAB voltar para a lista de itens arrastáveis e repetir esse processo até todos os itens arrastáveis estarem em suas respectivas áreas para soltar."
 
 #: public/js/drag_and_drop.js
-msgid "OK"
-msgstr "OK"
+msgid "Close"
+msgstr "Fechar"
+
+#: public/js/drag_and_drop.js
+msgid "Go to Beginning"
+msgstr "Vá para o Início"
 
 #: public/js/drag_and_drop.js
 msgid "Problem"
@@ -536,10 +570,6 @@ msgstr "Por favor, verifique seu envio."
 #: public/js/drag_and_drop_edit.js
 msgid "None"
 msgstr "Nenhum"
-
-#: public/js/drag_and_drop_edit.js
-msgid "Close item feedback popup"
-msgstr "Fechar o pop-up de comentário do item"
 
 # Translators: {earned} is the number of points earned. {possible} is the
 # total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
@@ -577,13 +607,38 @@ msgid_plural "{possible} points possible (ungraded)"
 msgstr[0] "{possible} ponto possível (não corrigido)"
 msgstr[1] "{possible} pontos possíveis (não corrigidos)"
 
+#: drag_and_drop_v2/public/js/drag_and_drop.js:374
+#: drag_and_drop_v2/public/js/drag_and_drop.js:839
+msgid "Hints:"
+msgstr "Dicas:"
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:224
+msgid ", dropzone"
+msgstr ", ponto de largada"
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:479
+msgid "Drag and Drop Problem"
+msgstr "Programa de Arrastar e Soltar"
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:509
+msgid "Drop Targets"
+msgstr "Destinos de Soltar"
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:517
+msgid "Actions"
+msgstr "Ações"
+
+#: drag_and_drop_v2/public/js/drag_and_drop.js:12
+msgid "Submitting"
+msgstr "Enviando"
+
 #: utils.py:44
 msgid "Your highest score is {score}"
 msgstr "Sua pontuação mais alta é {score}"
 
 #: utils.py:45
 msgid "Final attempt was used, highest score is {score}"
-msgstr ""
+msgstr "Tentativa final. Sua pontuação mais alta é {score}"
 
 #: utils.py:24
 msgid "Correctly placed {correct_count} item."
