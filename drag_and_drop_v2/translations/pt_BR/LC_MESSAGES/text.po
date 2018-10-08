@@ -460,11 +460,11 @@ msgstr "Corretamente posicionado em: {zone_title}"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:137
 msgid ", draggable, grabbed"
-msgstr ""
+msgstr ", arrastável, agarrado"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:137
 msgid ", draggable"
-msgstr ""
+msgstr ", arrastável"
 
 #: public/js/drag_and_drop.js
 msgid "Reset"
@@ -492,48 +492,48 @@ msgstr "Ajuda do Teclado"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:305
 msgid "This is a screen reader-friendly problem"
-msgstr ""
+msgstr "Essa tela possui problemas de leitura amigável."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:306
 msgid ""
 "You can complete this problem using only your keyboard by following the "
 "guidance below:"
-msgstr ""
+msgstr "Você pode completar esse problema usando seu teclado para seguir o guia abaixo:"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:307
 msgid ""
 "Drag and Drop problems consist of draggable items and dropzones. Users "
 "should select a draggable item with their keyboard and then navigate to an "
 "appropriate dropzone to drop it."
-msgstr ""
+msgstr "Os problemas de arrastar e soltar consistem em itens arrastáveis e área de soltura. Usuários podem selecionar um item arrastável com seu teclado e navegar até um ponto apropriado para solta-lo. "
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:309
 msgid ""
 "Use only TAB and SHIFT+TAB to navigate between draggable items and drop "
 "zones."
-msgstr ""
+msgstr "Utilize somente TAB e SHIFT+TAB para navegar entre os intens arrastaveis e áreas para soltar."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:310
 msgid "Press CTRL+M to select a draggable item (effectively picking it up)."
-msgstr ""
+msgstr "Aperte CTRL+M para selecionar um item arrastável (efetivamente pegando)"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:311
 msgid ""
 "Navigate using TAB and SHIFT+TAB to the appropriate dropzone and press "
 "CTRL+M once more to drop it here."
-msgstr ""
+msgstr "Navegue utilizando TAB e SHIFT+TAB para a área de soltura apropriada pressionando CTRL+M uma vez mais para soltar aqui."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:312
 msgid ""
 "Press ESC if you want to cancel the drop operation (for example, to select a"
 " different item)."
-msgstr ""
+msgstr "Pressione ESC se você deseja cancelar a operação de soltar (por exemplo, para selecionar um item diferente)."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:313
 msgid ""
 "TAB back to the list of draggable items and repeat this process until all of"
 " the draggable items have been placed on their respective dropzones."
-msgstr ""
+msgstr "TAB voltar para a lista de itens arrastáveis e repetir esse processo até todos os itens arrastáveis estarem em suas respectivas áreas para soltar."
 
 #: public/js/drag_and_drop.js
 msgid "Close"
@@ -541,7 +541,7 @@ msgstr "Fechar"
 
 #: public/js/drag_and_drop.js
 msgid "Go to Beginning"
-msgstr ""
+msgstr "Vá para o Início"
 
 #: public/js/drag_and_drop.js
 msgid "Problem"
@@ -610,23 +610,23 @@ msgstr[1] "{possible} pontos possíveis (não corrigidos)"
 #: drag_and_drop_v2/public/js/drag_and_drop.js:374
 #: drag_and_drop_v2/public/js/drag_and_drop.js:839
 msgid "Hints:"
-msgstr ""
+msgstr "Dicas:"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:224
 msgid ", dropzone"
-msgstr ""
+msgstr ", ponto de largada"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:479
 msgid "Drag and Drop Problem"
-msgstr ""
+msgstr "Programa de Arrastar e Soltar"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:509
 msgid "Drop Targets"
-msgstr ""
+msgstr "Destinos de Soltar"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:517
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:12
 msgid "Submitting"
