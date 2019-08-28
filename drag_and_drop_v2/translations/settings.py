@@ -65,6 +65,7 @@ LANGUAGES = [
     ('ar', 'Arabic'),
     ('es_419', 'Spanish (Latin America)'),
     ('fr', 'French'),
+    ('fr_CA', 'French (Canada)'),
     ('he', 'Hebrew'),
     ('hi', 'Hindi'),
     ('ko_KR', 'Korean (Korea)'),
