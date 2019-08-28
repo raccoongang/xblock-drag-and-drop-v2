@@ -1,4 +1,8 @@
 {
+    "block_id": "test-show-title-parameter.drag_and_drop_v2.d183.u0",
+    "display_name": "DnDv2 XBlock with plain text instructions",
+    "type": "drag-and-drop-v2",
+    "weight": 1,
     "title": "DnDv2 XBlock with plain text instructions",
     "mode": "standard",
     "max_attempts": 0,
@@ -15,6 +19,7 @@
     "display_zone_labels": false,
     "url_name": "test",
     "max_items_per_zone": 4,
+    "has_deadline_passed": false,
 
     "zones": [
         {

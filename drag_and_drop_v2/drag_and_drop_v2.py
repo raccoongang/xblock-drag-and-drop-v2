@@ -9,7 +9,8 @@ import json
 import logging
 import urllib
 import webob
-
+import pkg_resources
+from django.utils import translation
 from xblock.core import XBlock
 from xblock.exceptions import JsonHandlerError
 from xblock.fields import Scope, String, Dict, Float, Boolean, Integer
@@ -41,6 +42,8 @@ class DragAndDropBlock(
     """
     XBlock that implements a friendly Drag-and-Drop problem
     """
+
+    CATEGORY = "drag-and-drop-v2"
 
     SOLUTION_CORRECT = "correct"
     SOLUTION_PARTIAL = "partial"
@@ -253,6 +256,22 @@ class DragAndDropBlock(
         correct_count, total_count = self._get_item_stats()
         return correct_count / float(total_count)
 
+    @staticmethod
+    def _get_statici18n_js_url():
+        """
+        Returns the Javascript translation file for the currently selected language, if any found by
+        `pkg_resources`
+        """
+        lang_code = translation.get_language()
+        if not lang_code:
+            return None
+        text_js = 'public/js/translations/{lang_code}/text.js'
+        country_code = lang_code.split('-')[0]
+        for code in (lang_code, country_code):
+            if pkg_resources.resource_exists(loader.module_name, text_js.format(lang_code=code)):
+                return text_js.format(lang_code=code)
+        return None
+
     @XBlock.supports("multi_device")  # Enable this block for use in the mobile app via webview
     def student_view(self, context):
         """
@@ -265,10 +284,15 @@ class DragAndDropBlock(
         css_urls = (
             'public/css/drag_and_drop.css',
         )
-        js_urls = (
+        js_urls = [
             'public/js/vendor/virtual-dom-1.3.0.min.js',
             'public/js/drag_and_drop.js',
-        )
+        ]
+
+        statici18n_js_url = self._get_statici18n_js_url()
+        if statici18n_js_url:
+            js_urls.append(statici18n_js_url)
+
         for css_url in css_urls:
             fragment.add_css_url(self.runtime.local_resource_url(self, css_url))
         for js_url in js_urls:
@@ -276,11 +300,11 @@ class DragAndDropBlock(
 
         self.include_theme_files(fragment)
 
-        fragment.initialize_js('DragAndDropBlock', self.get_configuration())
+        fragment.initialize_js('DragAndDropBlock', self.student_view_data())
 
         return fragment
 
-    def get_configuration(self):
+    def student_view_data(self, context=None):
         """
         Get the configuration data for the student_view.
         The configuration is all the settings defined by the author, except for correct answers
@@ -308,6 +332,10 @@ class DragAndDropBlock(
             return items
 
         return {
+            "block_id": unicode(self.scope_ids.usage_id),
+            "display_name": self.display_name,
+            "type": self.CATEGORY,
+            "weight": self.weight,
             "mode": self.mode,
             "zones": self.zones,
             "max_attempts": self.max_attempts,
@@ -327,6 +355,7 @@ class DragAndDropBlock(
             "target_img_description": self.target_img_description,
             "item_background_color": self.item_background_color or None,
             "item_text_color": self.item_text_color or None,
+            "has_deadline_passed": self.has_submission_deadline_passed,
             # final feedback (data.feedback.finish) is not included - it may give away answers.
         }
 
@@ -334,7 +363,6 @@ class DragAndDropBlock(
         """
         Editing view in Studio
         """
-
         js_templates = loader.load_unicode('/templates/html/js_templates.html')
         # Get an 'id_suffix' string that is unique for this block.
         # We append it to HTML element ID attributes to ensure multiple instances of the DnDv2 block
@@ -358,10 +386,15 @@ class DragAndDropBlock(
         css_urls = (
             'public/css/drag_and_drop_edit.css',
         )
-        js_urls = (
+        js_urls = [
             'public/js/vendor/handlebars-v1.1.2.js',
             'public/js/drag_and_drop_edit.js',
-        )
+        ]
+
+        statici18n_js_url = self._get_statici18n_js_url()
+        if statici18n_js_url:
+            js_urls.append(statici18n_js_url)
+
         for css_url in css_urls:
             fragment.add_css_url(self.runtime.local_resource_url(self, css_url))
         for js_url in js_urls:
@@ -592,8 +625,24 @@ class DragAndDropBlock(
         """
         return self.max_attempts is None or self.max_attempts == 0 or self.attempts < self.max_attempts
 
+    @property
+    def has_submission_deadline_passed(self):
+        """
+        Returns a boolean indicating if the submission is past its deadline.
+
+        Using the `has_deadline_passed` method from InheritanceMixin which gets
+        added on the LMS/Studio, return if the submission is past its due date.
+        If the method not found, which happens for pure DragAndDropXblock,
+        return False which makes sure submission checks don't affect other
+        functionality.
+        """
+        if hasattr(self, "has_deadline_passed"):
+            return self.has_deadline_passed()               # pylint: disable=no-member
+        else:
+            return False
+
     @XBlock.handler
-    def get_user_state(self, request, suffix=''):
+    def student_view_user_state(self, request, suffix=''):
         """ GET all user-specific data, and any applicable feedback """
         data = self._get_user_state()
 
@@ -612,6 +661,11 @@ class DragAndDropBlock(
             raise JsonHandlerError(
                 409,
                 self.i18n_service.gettext("Max number of attempts reached")
+            )
+        if self.has_submission_deadline_passed:
+            raise JsonHandlerError(
+                409,
+                self.i18n_service.gettext("Submission deadline has passed.")
             )
 
     def _get_feedback(self, include_item_feedback=False):
@@ -669,8 +723,9 @@ class DragAndDropBlock(
             else:
                 grade_feedback_template = self.i18n_service.gettext(FeedbackMessages.FINAL_ATTEMPT_TPL)
 
-            feedback_msgs.append(
-                FeedbackMessage(grade_feedback_template.format(score=self.weighted_grade()), grade_feedback_class)
+            feedback_msgs.append(FeedbackMessage(
+                self.i18n_service.gettext(grade_feedback_template).format(score=self.weighted_grade()),
+                grade_feedback_class)
             )
 
         return feedback_msgs, misplaced_ids
@@ -700,8 +755,9 @@ class DragAndDropBlock(
         self._publish_item_dropped_event(item_attempt, is_correct)
 
         item_feedback_key = 'correct' if is_correct else 'incorrect'
-        item_feedback = FeedbackMessage(item['feedback'][item_feedback_key], None)
+        item_feedback = FeedbackMessage(self._expand_static_url(item['feedback'][item_feedback_key]), None)
         overall_feedback, __ = self._get_feedback()
+
         return {
             'correct': is_correct,
             'grade': self._get_weighted_earned_if_set(),
@@ -897,8 +953,9 @@ class DragAndDropBlock(
         Converts to a dict if data is stored in legacy tuple form.
         """
 
-        # IMPORTANT: this method should always return a COPY of self.item_state - it is called from get_user_state
-        # handler and the data it returns is manipulated there to hide correctness of items placed.
+        # IMPORTANT: this method should always return a COPY of self.item_state - it is called from
+        # student_view_user_state handler and the data it returns is manipulated there to hide
+        # correctness of items placed.
         state = {}
         migrator = StateMigration(self)
 

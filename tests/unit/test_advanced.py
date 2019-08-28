@@ -59,11 +59,14 @@ class BaseDragAndDropAjaxFixture(TestCaseMixin):
         return json.loads(loader.load_unicode('data/{}/settings.json'.format(cls.FOLDER)))
 
     @classmethod
-    def expected_configuration(cls):
+    def expected_student_data(cls):
         return json.loads(loader.load_unicode('data/{}/config_out.json'.format(cls.FOLDER)))
 
-    def test_get_configuration(self):
-        self.assertEqual(self.block.get_configuration(), self.expected_configuration())
+    def test_student_view_data(self):
+        data = self.block.student_view_data()
+        expected = self.expected_student_data()
+        expected['block_id'] = data['block_id']  # Block ids aren't stable
+        self.assertEqual(data, expected)
 
 
 @ddt.ddt
@@ -250,7 +253,7 @@ class StandardModeFixture(BaseDragAndDropAjaxFixture):
             "grade": expected_grade,
             'overall_feedback': [self._make_feedback_message(message=self.INITIAL_FEEDBACK)],
         }
-        self.assertEqual(expected_state, self.call_handler('get_user_state', method="GET"))
+        self.assertEqual(expected_state, self.call_handler('student_view_user_state', method="GET"))
 
         res = self.call_handler(self.DROP_ITEM_HANDLER, {"val": 1, "zone": self.ZONE_2})
         # All four items are in correct position, so the final raw grade is 4/4.
@@ -273,7 +276,7 @@ class StandardModeFixture(BaseDragAndDropAjaxFixture):
             "grade": expected_grade,
             'overall_feedback': [self._make_feedback_message(self.FINAL_FEEDBACK)],
         }
-        self.assertEqual(expected_state, self.call_handler('get_user_state', method="GET"))
+        self.assertEqual(expected_state, self.call_handler('student_view_user_state', method="GET"))
 
     def test_do_attempt_not_available(self):
         """
@@ -394,6 +397,23 @@ class AssessmentModeFixture(BaseDragAndDropAjaxFixture):
         res = self.call_handler(self.DO_ATTEMPT_HANDLER, data={})
         self.assertEqual(self.block.attempts, attempts + 1)
         self.assertEqual(res['attempts'], self.block.attempts)
+
+    @ddt.data(
+        (True, 409, True),
+        (False, 200, False),
+    )
+    @ddt.unpack
+    @mock.patch('drag_and_drop_v2.DragAndDropBlock.has_submission_deadline_passed', new_callable=mock.PropertyMock)
+    def test_do_attempt_has_deadline_passed(self, is_past_deadline, status_code, expect_error, mock_deadline_passed):
+        """
+        Scenario: If the submission is past its deadline date, the attempt is not possible and
+        409 Conflict error is thrown.
+        """
+        mock_deadline_passed.return_value = is_past_deadline
+        response = self.call_handler(self.DO_ATTEMPT_HANDLER, data={}, expect_json=False)
+        self.assertEqual(response.status_code, status_code)
+        if expect_error:
+            self.assertIn("Submission deadline has passed.", response.body)
 
     @ddt.data(*[random.randint(1, 50) for _ in xrange(5)])  # pylint: disable=star-args
     def test_do_attempt_correct_mark_complete_and_publish_grade(self, weight):
@@ -912,7 +932,7 @@ class TestDragAndDropAssessmentData(AssessmentModeFixture, unittest.TestCase):
         self.assertEqual(1, len(published_grades))
         self.assertEqual({'value': 0, 'max_value': 1, 'only_if_higher': None}, published_grades[-1])
 
-        user_state = self.call_handler('get_user_state', method="GET")
+        user_state = self.call_handler('student_view_user_state', method="GET")
         self.assertEqual(user_state['grade'], 0)
 
     def test_do_attempt_correct_takes_decoy_into_account(self):
