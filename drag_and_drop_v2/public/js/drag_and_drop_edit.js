@@ -289,6 +289,7 @@ function DragAndDropEditBlock(runtime, element, params) {
                     problem: {
                         toggleAssessmentSettings: function(e) {
                             e.preventDefault();
+
                             var $modeSetting = $(e.currentTarget),
                                 $problemForm = $modeSetting.closest('form'),
                                 $assessmentSettings = $problemForm.find('.assessment-setting');
@@ -684,6 +685,7 @@ function DragAndDropEditBlock(runtime, element, params) {
                             'display_name': $element.find('.display-name').val(),
                             'mode': $element.find(".problem-mode").val(),
                             'max_attempts': $element.find(".max-attempts").val(),
+                            'show_answer_button': $element.find('.show-answer-button').is(':checked'),
                             'show_title': $element.find('.show-title').is(':checked'),
                             'weight': $element.find('.weight').val(),
                             'problem_text': $element.find('.problem-text').val(),

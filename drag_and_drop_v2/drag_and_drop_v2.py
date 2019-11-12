@@ -94,6 +94,14 @@ class DragAndDropBlock(
         enforce_type=True,
     )
 
+    show_answer_button = Boolean(
+        display_name=_("\"Show answer\" button"),
+        help=_("Uncheck to never show the \"Show answer\" button."),
+        scope=Scope.settings,
+        default=True,
+        enforce_type=True,
+    )
+
     show_title = Boolean(
         display_name=_("Show title"),
         help=_("Display the title to the learner?"),
@@ -321,6 +329,7 @@ class DragAndDropBlock(
             "items": items_without_answers(),
             "title": self.display_name,
             "show_title": self.show_title,
+            "show_answer_button": self.show_answer_button,
             "problem_text": self.question_text,
             "show_problem_header": self.show_question_header,
             "target_img_expanded_url": self.target_img_expanded_url,
@@ -334,7 +343,6 @@ class DragAndDropBlock(
         """
         Editing view in Studio
         """
-
         js_templates = loader.load_unicode('/templates/html/js_templates.html')
         # Get an 'id_suffix' string that is unique for this block.
         # We append it to HTML element ID attributes to ensure multiple instances of the DnDv2 block
@@ -396,6 +404,7 @@ class DragAndDropBlock(
         self.display_name = submissions['display_name']
         self.mode = submissions['mode']
         self.max_attempts = submissions['max_attempts']
+        self.show_answer_button = submissions['show_answer_button']
         self.show_title = submissions['show_title']
         self.question_text = submissions['problem_text']
         self.show_question_header = submissions['show_problem_header']
