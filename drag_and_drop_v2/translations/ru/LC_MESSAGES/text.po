@@ -1,4 +1,4 @@
-# 
+#
 # Translators:
 # Liubov Fomicheva <liubov.nelapa@gmail.com>, 2017-2018
 # Weyedide <weyedide@gmail.com>, 2016
@@ -478,7 +478,7 @@ msgstr ""
 
 #: public/js/drag_and_drop.js
 msgid "Feedback"
-msgstr ""
+msgstr "Результат"
 
 #: public/js/drag_and_drop.js
 msgid "Keyboard Help"
@@ -676,3 +676,13 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
+
+#: drag_and_drop_v2.py
+#, python-brace-format
+msgid "{display_name} is only accessible to enrolled learners. Sign in or register, and enroll in this course to view it."
+msgstr "{display_name} доступен только для зарегистрированных учащихся. Войдите или зарегистрируйтесь и подпишитесь на этот курс, чтобы просмотреть его."
+
+#: drag_and_drop_v2.py
+msgid "This content is only accessible to enrolled learners. Sign in or register, and enroll in this course to view it."
+msgstr "Этот контент доступен только для зарегистрированных учащихся. Войдите или зарегистрируйтесь и подпишитесь на этот курс, чтобы просмотреть его."
+

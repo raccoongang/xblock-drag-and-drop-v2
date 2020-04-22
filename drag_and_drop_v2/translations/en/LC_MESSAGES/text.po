@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-02 05:27+0000\n"
+"POT-Creation-Date: 2020-04-21 14:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,161 +103,165 @@ msgstr ""
 msgid "Good work! You have completed this drag and drop problem."
 msgstr ""
 
-#: drag_and_drop_v2.py:63
+#: drag_and_drop_v2.py:65
 msgid "Title"
 msgstr ""
 
-#: drag_and_drop_v2.py:64
+#: drag_and_drop_v2.py:66
 msgid ""
 "The title of the drag and drop problem. The title is displayed to learners."
 msgstr ""
 
-#: drag_and_drop_v2.py:66
+#: drag_and_drop_v2.py:68
 msgid "Drag and Drop"
 msgstr ""
 
-#: drag_and_drop_v2.py:71
+#: drag_and_drop_v2.py:73
 msgid "Mode"
 msgstr ""
 
-#: drag_and_drop_v2.py:73
+#: drag_and_drop_v2.py:75
 msgid ""
 "Standard mode: the problem provides immediate feedback each time a learner "
 "drops an item on a target zone. Assessment mode: the problem provides "
 "feedback only after a learner drops all available items on target zones."
 msgstr ""
 
-#: drag_and_drop_v2.py:80
+#: drag_and_drop_v2.py:82
 msgid "Standard"
 msgstr ""
 
-#: drag_and_drop_v2.py:81
+#: drag_and_drop_v2.py:83
 msgid "Assessment"
 msgstr ""
 
-#: drag_and_drop_v2.py:88
+#: drag_and_drop_v2.py:90
 msgid "Maximum attempts"
 msgstr ""
 
-#: drag_and_drop_v2.py:90
+#: drag_and_drop_v2.py:92
 msgid ""
 "Defines the number of times a student can try to answer this problem. If the "
 "value is not set, infinite attempts are allowed."
 msgstr ""
 
-#: drag_and_drop_v2.py:99
+#: drag_and_drop_v2.py:101
 msgid "Show title"
 msgstr ""
 
-#: drag_and_drop_v2.py:100
+#: drag_and_drop_v2.py:102
 msgid "Display the title to the learner?"
 msgstr ""
 
-#: drag_and_drop_v2.py:107
+#: drag_and_drop_v2.py:109
 msgid "Problem text"
 msgstr ""
 
-#: drag_and_drop_v2.py:108
+#: drag_and_drop_v2.py:110
 msgid "The description of the problem or instructions shown to the learner."
 msgstr ""
 
-#: drag_and_drop_v2.py:115
+#: drag_and_drop_v2.py:117
 msgid "Show \"Problem\" heading"
 msgstr ""
 
-#: drag_and_drop_v2.py:116
+#: drag_and_drop_v2.py:118
 msgid "Display the heading \"Problem\" above the problem text?"
 msgstr ""
 
-#: drag_and_drop_v2.py:123
+#: drag_and_drop_v2.py:125
 msgid "Problem Weight"
 msgstr ""
 
-#: drag_and_drop_v2.py:124
+#: drag_and_drop_v2.py:126
 msgid "Defines the number of points the problem is worth."
 msgstr ""
 
-#: drag_and_drop_v2.py:131
+#: drag_and_drop_v2.py:133
 msgid "Item background color"
 msgstr ""
 
-#: drag_and_drop_v2.py:132
+#: drag_and_drop_v2.py:134
 msgid ""
 "The background color of draggable items in the problem (example: 'blue' or "
 "'#0000ff')."
 msgstr ""
 
-#: drag_and_drop_v2.py:139
+#: drag_and_drop_v2.py:141
 msgid "Item text color"
 msgstr ""
 
-#: drag_and_drop_v2.py:140
+#: drag_and_drop_v2.py:142
 msgid "Text color to use for draggable items (example: 'white' or '#ffffff')."
 msgstr ""
 
-#: drag_and_drop_v2.py:147
+#: drag_and_drop_v2.py:149
 msgid "Maximum items per zone"
 msgstr ""
 
-#: drag_and_drop_v2.py:148
+#: drag_and_drop_v2.py:150
 msgid ""
 "This setting limits the number of items that can be dropped into a single "
 "zone."
 msgstr ""
 
-#: drag_and_drop_v2.py:155
+#: drag_and_drop_v2.py:157
 msgid "Problem data"
 msgstr ""
 
-#: drag_and_drop_v2.py:157
+#: drag_and_drop_v2.py:159
 msgid ""
 "Information about zones, items, feedback, and background image for this "
 "problem. This information is derived from the input that a course author "
 "provides via the interactive editor when configuring the problem."
 msgstr ""
 
-#: drag_and_drop_v2.py:167
+#: drag_and_drop_v2.py:169
 msgid ""
 "Information about current positions of items that a learner has dropped on "
 "the target image."
 msgstr ""
 
-#: drag_and_drop_v2.py:174
+#: drag_and_drop_v2.py:176
 msgid "Number of attempts learner used"
 msgstr ""
 
-#: drag_and_drop_v2.py:181
+#: drag_and_drop_v2.py:183
 msgid "Indicates whether a learner has completed the problem at least once"
 msgstr ""
 
-#: drag_and_drop_v2.py:188
+#: drag_and_drop_v2.py:190
 msgid ""
 "DEPRECATED. Keeps maximum score achieved by student as a weighted value."
 msgstr ""
 
-#: drag_and_drop_v2.py:194
+#: drag_and_drop_v2.py:196
 msgid "Keeps maximum score achieved by student as a raw value between 0 and 1."
 msgstr ""
 
-#: drag_and_drop_v2.py:497
+#: drag_and_drop_v2.py:506
 #, python-brace-format
 msgid "Unknown DnDv2 mode {mode} - course is misconfigured"
 msgstr ""
 
-#: drag_and_drop_v2.py:572
+#: drag_and_drop_v2.py:581
 msgid "show_answer handler should only be called for assessment mode"
 msgstr ""
 
-#: drag_and_drop_v2.py:577
+#: drag_and_drop_v2.py:586
 msgid "There are attempts remaining"
 msgstr ""
 
-#: drag_and_drop_v2.py:635
+#: drag_and_drop_v2.py:660
 msgid "do_attempt handler should only be called for assessment mode"
 msgstr ""
 
-#: drag_and_drop_v2.py:640 drag_and_drop_v2.py:746
+#: drag_and_drop_v2.py:665 drag_and_drop_v2.py:776
 msgid "Max number of attempts reached"
+msgstr ""
+
+#: drag_and_drop_v2.py:670
+msgid "Submission deadline has passed."
 msgstr ""
 
 #: templates/html/drag_and_drop.html:4
@@ -564,11 +568,11 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: public/js/drag_and_drop.js:445 public/js/drag_and_drop.js:1173
+#: public/js/drag_and_drop.js:445 public/js/drag_and_drop.js:1184
 msgid "Some of your answers were not correct."
 msgstr ""
 
-#: public/js/drag_and_drop.js:446 public/js/drag_and_drop.js:1176
+#: public/js/drag_and_drop.js:446 public/js/drag_and_drop.js:1187
 msgid "Hints:"
 msgstr ""
 
@@ -632,7 +636,7 @@ msgstr ""
 msgid "An error occurred. Unable to load drag and drop problem."
 msgstr ""
 
-#: public/js/drag_and_drop.js:1298
+#: public/js/drag_and_drop.js:1309
 msgid "You cannot add any more items to this zone."
 msgstr ""
 
