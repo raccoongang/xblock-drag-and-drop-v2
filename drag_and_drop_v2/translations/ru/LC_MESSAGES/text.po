@@ -474,7 +474,7 @@ msgstr "Скрыть Ответ"
 
 #: public/js/drag_and_drop.js
 msgid "Submit"
-msgstr ""
+msgstr "Отправить"
 
 #: public/js/drag_and_drop.js
 msgid "Feedback"
@@ -482,7 +482,7 @@ msgstr "Результат"
 
 #: public/js/drag_and_drop.js
 msgid "Keyboard Help"
-msgstr ""
+msgstr "Справка по клавиатуре"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:305
 msgid "This is a screen reader-friendly problem"
@@ -493,6 +493,8 @@ msgid ""
 "You can complete this problem using only your keyboard by following the "
 "guidance below:"
 msgstr ""
+"Вы можете решить эту проблему, используя только клавиатуру, следуя приведенным "
+"ниже инструкциям:"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:307
 msgid ""
@@ -506,40 +508,48 @@ msgid ""
 "Use only TAB and SHIFT+TAB to navigate between draggable items and drop "
 "zones."
 msgstr ""
+"Используйте только TAB и SHIFT + TAB для перемещения между перетаскиваемыми объектами и "
+"зонами перетаскивания."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:310
 msgid "Press CTRL+M to select a draggable item (effectively picking it up)."
-msgstr ""
+msgstr "Нажмите CTRL + M, чтобы выбрать перетаскиваемый объект (эффективно его подбирая)."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:311
 msgid ""
 "Navigate using TAB and SHIFT+TAB to the appropriate dropzone and press "
 "CTRL+M once more to drop it here."
 msgstr ""
+"Перейдите с помощью TAB и SHIFT + TAB в соответствующую зону сброса и нажмите "
+"CTRL + M еще раз, чтобы бросить это здесь."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:312
 msgid ""
 "Press ESC if you want to cancel the drop operation (for example, to select a"
 " different item)."
 msgstr ""
+"Нажмите ESC, если вы хотите отменить операцию удаления (например, чтобы выбрать "
+"другой предмет)."
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:313
 msgid ""
 "TAB back to the list of draggable items and repeat this process until all of"
 " the draggable items have been placed on their respective dropzones."
 msgstr ""
+"Вернитесь к списку перетаскиваемых элементов и повторяйте этот процесс до тех пор, пока все "
+"перетаскиваемые предметы были помещены в соответствующие им дропзоны."
 
 #: public/js/drag_and_drop.js
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: public/js/drag_and_drop.js
 msgid "Go to Beginning"
-msgstr ""
+msgstr "К началу"
 
 #: public/js/drag_and_drop.js
 msgid "Problem"
-msgstr ""
+msgstr "Задание"
 
 #: public/js/drag_and_drop.js
 msgid "An error occurred. Unable to load drag and drop problem."
@@ -547,15 +557,15 @@ msgstr "Произошла ошибка.  Не удалось загрузить
 
 #: public/js/drag_and_drop.js
 msgid "You have used {used} of {total} attempts."
-msgstr ""
+msgstr "Вы использовали {used} из {total} попыток."
 
 #: public/js/drag_and_drop.js
 msgid "Some of your answers were not correct."
-msgstr ""
+msgstr "Некоторые из ваших ответов не были правильными."
 
 #: public/js/drag_and_drop_edit.js
 msgid "There was an error with your form."
-msgstr ""
+msgstr "В вашей форме произошла ошибка."
 
 #: public/js/drag_and_drop_edit.js
 msgid "Please check over your submission."
@@ -572,8 +582,8 @@ msgstr ""
 #: public/js/drag_and_drop.js:453
 msgid "{earned}/{possible} point (graded)"
 msgid_plural "{earned}/{possible} points (graded)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{earned}/{possible} балл (оценивается)"
+msgstr[1] "{earned}/{possible} балла (оценивается)"
 msgstr[2] ""
 msgstr[3] ""
 
@@ -584,8 +594,8 @@ msgstr[3] ""
 #: public/js/drag_and_drop.js:459
 msgid "{earned}/{possible} point (ungraded)"
 msgid_plural "{earned}/{possible} points (ungraded)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{earned}/{possible} балл (не оценивается)"
+msgstr[1] "{earned}/{possible} балла (не оценивается)"
 msgstr[2] ""
 msgstr[3] ""
 
@@ -594,8 +604,8 @@ msgstr[3] ""
 #: public/js/drag_and_drop.js:468
 msgid "{possible} point possible (graded)"
 msgid_plural "{possible} points possible (graded)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{possible} балл возможен (оценивается)"
+msgstr[1] "{possible} балла возможно (оценивается)"
 msgstr[2] ""
 msgstr[3] ""
 
@@ -604,15 +614,15 @@ msgstr[3] ""
 #: public/js/drag_and_drop.js:474
 msgid "{possible} point possible (ungraded)"
 msgid_plural "{possible} points possible (ungraded)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{possible} балл возможен (не оценивается)"
+msgstr[1] "{possible} балла возможно (не оценивается)"
 msgstr[2] ""
 msgstr[3] ""
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:374
 #: drag_and_drop_v2/public/js/drag_and_drop.js:839
 msgid "Hints:"
-msgstr ""
+msgstr "Советы:"
 
 #: drag_and_drop_v2/public/js/drag_and_drop.js:224
 msgid ", dropzone"
@@ -636,7 +646,7 @@ msgstr ""
 
 #: utils.py:44
 msgid "Your highest score is {score}"
-msgstr ""
+msgstr "Ваш самый высокий балл - {score}"
 
 #: utils.py:45
 msgid "Final attempt was used, highest score is {score}"
@@ -645,16 +655,16 @@ msgstr ""
 #: utils.py:24
 msgid "Correctly placed {correct_count} item."
 msgid_plural "Correctly placed {correct_count} items."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Правильно размещен {correct_count} предмет."
+msgstr[1] "Правильно размещены {correct_count} предмета."
 msgstr[2] ""
 msgstr[3] ""
 
 #: utils.py:62
 msgid "Misplaced {misplaced_count} item."
 msgid_plural "Misplaced {misplaced_count} items."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Неверно размещен {misplaced_count} предмет."
+msgstr[1] "Неверно размещены {misplaced_count} предмета."
 msgstr[2] ""
 msgstr[3] ""
 
@@ -664,16 +674,16 @@ msgid ""
 msgid_plural ""
 "Misplaced {misplaced_count} items. Misplaced items were returned to item "
 "bank."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Некорректно размещен {misplaced_count} предмет. Неуместный товар был возвращен в банк предметов."
+msgstr[1] "Некорректно размещено {misplaced_count} предмета. Неуместный товар был возвращен в банк предметов."
 msgstr[2] ""
 msgstr[3] ""
 
 #: utils.py:40
 msgid "Did not place {missing_count} required item."
 msgid_plural "Did not place {missing_count} required items."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Не размещен {missing_count} обязательный элемент."
+msgstr[1] "Не размещено {missing_count} обязательных элемента."
 msgstr[2] ""
 msgstr[3] ""
 
