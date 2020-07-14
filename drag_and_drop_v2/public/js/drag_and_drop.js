@@ -1808,7 +1808,8 @@ function DragAndDropBlock(runtime, element, configuration) {
             state.attempts = data.attempts;
             state.grade = data.grade;
             state.feedback = data.feedback;
-            state.overall_feedback = data.overall_feedback;
+            const filtered = data.overall_feedback.filter(el => el.message_class !== null)
+            state.overall_feedback = filtered;
             state.last_action_correct = data.correct;
 
             if (attemptsRemain()) {
