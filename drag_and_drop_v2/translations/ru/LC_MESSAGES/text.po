@@ -442,7 +442,7 @@ msgstr "ок"
 
 #: public/js/drag_and_drop.js
 msgid "Item Bank"
-msgstr ""
+msgstr "Банк элементов"
 
 #: public/js/drag_and_drop.js
 msgid "Placed in: {zone_title}"
@@ -650,23 +650,23 @@ msgstr "Ваш самый высокий балл - {score}"
 
 #: utils.py:45
 msgid "Final attempt was used, highest score is {score}"
-msgstr ""
+msgstr "Последняя попытка была использована, наивысшая оценка - {score}"
 
 #: utils.py:24
 msgid "Correctly placed {correct_count} item."
 msgid_plural "Correctly placed {correct_count} items."
-msgstr[0] "Правильно размещен {correct_count} предмет."
-msgstr[1] "Правильно размещены {correct_count} предмета."
-msgstr[2] "Правильно размещено {correct_count} предметов."
-msgstr[3] "Правильно размещены {correct_count} предмета."
+msgstr[0] "Правильно размещен {correct_count} элемент."
+msgstr[1] "Правильно размещены {correct_count} элемента."
+msgstr[2] "Правильно размещено {correct_count} элементов."
+msgstr[3] "Правильно размещены {correct_count} элемента."
 
 #: utils.py:62
 msgid "Misplaced {misplaced_count} item."
 msgid_plural "Misplaced {misplaced_count} items."
-msgstr[0] "Неверно размещен {misplaced_count} предмет."
-msgstr[1] "Неверно размещены {misplaced_count} предмета."
-msgstr[2] "Неверно размещено {misplaced_count} предметов."
-msgstr[3] "Неверно размещены {misplaced_count} предмета."
+msgstr[0] "Неверно размещен {misplaced_count} элемент."
+msgstr[1] "Неверно размещены {misplaced_count} элемента."
+msgstr[2] "Неверно размещено {misplaced_count} элементов."
+msgstr[3] "Неверно размещены {misplaced_count} элемента."
 
 #: utils.py:73
 msgid ""
@@ -674,10 +674,10 @@ msgid ""
 msgid_plural ""
 "Misplaced {misplaced_count} items. Misplaced items were returned to item "
 "bank."
-msgstr[0] "Некорректно размещен {misplaced_count} предмет. Неуместный товар был возвращен в банк предметов."
-msgstr[1] "Некорректно размещено {misplaced_count} предмета. Неуместный товар был возвращен в банк предметов."
-msgstr[2] "Некорректно размещено {misplaced_count} предметов. Неуместный товар был возвращен в банк предметов."
-msgstr[3] "Некорректно размещено {misplaced_count} предмета. Неуместный товар был возвращен в банк предметов."
+msgstr[0] "Некорректно размещен {misplaced_count} элемент. Неуместный ответ был возвращен в банк элементов."
+msgstr[1] "Некорректно размещено {misplaced_count} элемента. Неуместный ответ был возвращен в банк элементов."
+msgstr[2] "Некорректно размещено {misplaced_count} элементов. Неуместный ответ был возвращен в банк элементов."
+msgstr[3] "Некорректно размещено {misplaced_count} элементов. Неуместный ответ был возвращен в банк элементов."
 
 #: utils.py:40
 msgid "Did not place {missing_count} required item."
