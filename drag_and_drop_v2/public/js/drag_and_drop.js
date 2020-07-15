@@ -395,6 +395,7 @@ function DragAndDropTemplates(configuration) {
 
     var sidebarTemplate = function(ctx) {
         var showAnswerButton = null;
+
         if (ctx.show_show_answer) {
             var options = {
                 disabled: ctx.showing_answer ? true : ctx.disable_show_answer_button,
@@ -1851,7 +1852,11 @@ function DragAndDropBlock(runtime, element, configuration) {
     };
 
     var canShowAnswer = function() {
-        return configuration.mode === DragAndDropBlock.ASSESSMENT_MODE && !attemptsRemain();
+        return (
+            configuration.mode === DragAndDropBlock.ASSESSMENT_MODE &&
+            !attemptsRemain() &&
+            configuration.show_answer_button
+        );
     };
 
     var attemptsRemain = function() {
@@ -1919,6 +1924,10 @@ function DragAndDropBlock(runtime, element, configuration) {
         var item_bank_focusable = (state.keyboard_placement_mode || state.showing_answer) &&
             configuration.mode === DragAndDropBlock.ASSESSMENT_MODE;
 
+        var show_show_answer_button = (
+            configuration.mode == DragAndDropBlock.ASSESSMENT_MODE && configuration.show_answer_button
+        );
+
         var context = {
             drag_container_max_width: containerMaxWidth,
             // configuration - parts that never change:
@@ -1932,7 +1941,7 @@ function DragAndDropBlock(runtime, element, configuration) {
             problem_html: configuration.problem_text,
             show_problem_header: configuration.show_problem_header,
             show_submit_answer: configuration.mode == DragAndDropBlock.ASSESSMENT_MODE,
-            show_show_answer: configuration.mode == DragAndDropBlock.ASSESSMENT_MODE,
+            show_show_answer: show_show_answer_button,
             target_img_src: configuration.target_img_expanded_url,
             target_img_description: configuration.target_img_description,
             display_zone_labels: configuration.display_zone_labels,

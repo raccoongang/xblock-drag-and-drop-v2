@@ -36,6 +36,7 @@
                       {% trans fields.mode.help %}
                     </div>
 
+                    <span class="assessment-setting">
                     <label class="h4 assessment-setting">
                       <span>{% trans fields.max_attempts.display_name %}</span>
                       <input class="max-attempts"
@@ -48,6 +49,17 @@
                     <div id="max-attempts-description-{{id_suffix}}" class="assessment-setting form-help">
                       {% trans fields.max_attempts.help %}
                     </div>
+                    <label class="h4 assessment-setting">
+                      <input class="show-answer-button"
+                             type="checkbox"
+                             aria-describedby="show-answer-button-description-{{id_suffix}}"
+                             {% if self.show_answer_button %}checked="checked"{% endif %}>
+                      <span>{% trans fields.show_answer_button.display_name %}</span>
+                    </label>
+                    <div id="show-answer-button-description-{{id_suffix}}" class="assessment-setting form-help">
+                      {% trans fields.show_answer_button.help %}
+                    </div>
+                    </span>
 
                     <label class="h4">
                         <span>{% trans fields.weight.display_name %}</span>
